@@ -178,20 +178,22 @@
 
   ### 4. Struktur Aplikasi | Ikhtisar CodeIgniter4
   Struktur direktori default: `app/`, `public/`, `writable/`, `test/` dan `vendor/` atau `system/` <br>
-  - `app/` <br> <br>
+  - `app/` sebagai inti dari aplikasi <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/e1f69923-dfb6-4896-8a01-f30fcdf51fea)
-  - `public/` <br> <br>
+  - `public/` untuk menyimpan aset->dapat di modifikasi <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/f69fa981-5924-4431-a29f-e0b46d5c02a0)
-  - `writable/` <br> <br>
+  - `writable/` digunakan jika codeiginter akan mengisi otomatis <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/a4565ee7-a600-452b-bae3-75fc3eef6ec7)
-  - `test/` <br> <br>
+  - `test/` digunakan apabila aplikasi menjalankan testing <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/9cd5ac26-7e40-4d02-8432-2a34e51bd2f0)
   - `vendor/` <br> <br>
+  Tempat menyimpan dependency aplikasi. Dependency dapat berarti suatu library yang digunakan dalam suatu aplikasi, dapat juga berarti ketergantungan antara satu aplikasi dengan aplikasi yang lain). Vendor dikelola oleh composer.json <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/0d3096b3-c92f-468f-9460-c8f9b7d39557)
   - `system/`<br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/0d36831c-b6f3-49c2-b475-05edaf54ee8d)
 
-
+### 5. MVC | Ikhtisar CodeIgniter4
+MVC adalah 
 
 
 
