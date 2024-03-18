@@ -17,4 +17,4 @@
   - Web Browser -> Chrome
   - Web Server -> PHP 7.2+, MySQL 5.1+, Phpmyadmin -> Laragon
   - Composer -> package manager: utk install codeigniter
-
+  
