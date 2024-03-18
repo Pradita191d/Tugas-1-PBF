@@ -105,28 +105,26 @@
      ### Membuat Tampilan
      - Tampilan pertama adalah header yang disimpan di `App/Views/templates/header.php`<br>
        Isi kode:
-       ```php
-       <!doctype html>
-       <html>
-       <head>
-          <title>CodeIgniter Tutorial</title>
-       </head>
-       <body>
-          <h1><?= esc($title) ?></h1>
-       ```
-        ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/a748d3e7-db31-4c5c-830b-e0f6f1cbe661)
+          ```php
+          <!doctype html>
+          <html>
+          <head>
+             <title>CodeIgniter Tutorial</title>
+          </head>
+          <body>
+             <h1><?= esc($title) ?></h1>
+          ```
    
-      - Tampilan kedua adalah footer yang disimpan di `App/Views/templates/header.php`
-        Isi kode:
-        ```php
-        <em>&copy; 2022</em>
-            </body>
-        </html>
-        ```
-  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/fe7758ef-ab5f-433b-a02a-a0537612771d)
+    - Tampilan kedua adalah footer yang disimpan di `App/Views/templates/header.php`
+      Isi kode:
+      ```php
+      <em>&copy; 2022</em>
+               </body>
+           </html>
+      ```
 
   ### Menambah Logika Controller
-  Buat home.php dan about.php di `App/Views/pages`
+  Buat home.php dan about.php di `App/Views/pages`<br>
   Isi kode:
      ```php
       <!DOCTYPE html>
@@ -141,6 +139,8 @@
       </body>
       </html>
      ```
+     Susunan direktori:
+  
      ![Screenshot 2024-03-18 125834](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/f57c2f28-aa90-49a8-82e1-22be209366f7)
 
 
