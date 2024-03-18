@@ -6,7 +6,7 @@ B. Alasan perlu menggunakan framework
    - Mempersingkat waktu
    - Struktur aplikasi terorganisir(rapih)
    - Terdapat tools & libraries
-   - Fleksible : bisa terkoneksi dengan database berbeda atau aplikasi pihak ke-3
+   - Fleksible : bisa terkoneksi dengan database berbeda atau aplikasi pihak ke-3.
 C. Framework CodeIgniter
    Ada beberapa contoh framework untuk bahasa pemrograman PHP, tetapi kali ini saya akan menjelaskan salah satunya saja yaitu CodeIgniter.
    Di bawah ini akan dijabarkan beberapa cara kita menginstall dan menggunakan framework CodeIgniter:
