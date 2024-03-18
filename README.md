@@ -237,7 +237,44 @@
   Sebelumnya, seperti di bawah ini: <br>
   ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/66511598-ea2e-4d8c-93d7-fabe23b056e9) <br>
   Hilangkan tanda '#' untuk menjalankan kode tersebut. <br>
-  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/ef57bdde-76ee-4049-8912-d6b281b2f807)
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/ef57bdde-76ee-4049-8912-d6b281b2f807) <br>
+
+  - Buat Models Berita <br>
+  Buka direktori app/Models dan buat file baru bernama NewsModel.php dan tambahkan kode berikut. <br>
+  ```php
+  <?php
+
+  namespace App\Models;
+  
+  use CodeIgniter\Model;
+  
+  class NewsModel extends Model
+  {
+      protected $table = 'news';
+  }
+  ```
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/40aa9a83-b4ec-497c-bf72-a4deb65744ed) <br>
+  - Tambahkan Metode NewsModel::getNews() <br>
+  ```php
+   public function getNews($slug = false)
+    {
+        if ($slug === false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['slug' => $slug])->first();
+    }
+  ```
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/2808ff57-2fd4-49a1-931f-17896db8e727) <br>
+
+  Kode ini dapat dijalankan untuk menjalankan dua query berbeda. Dua metode yang digunakan yaitu findAll() dan first(), disediakan oleh kelas CodeIgniter\Model. Kita sudah mengetahui tabel mana yang akan digunakan berdasarkan properti $table  yang kita atur sebelumnya di kelas NewsModel. Ini adalah metode pembantu yang menggunakan pembuat kueri untuk menjalankan perintah pada tabel saat ini dan mengembalikan kumpulan hasil dalam format pilihan Anda. Dalam contoh ini, findAll() mengembalikan array dari array. <br>
+
+
+  
+  
+
+
+  
 
 
     
