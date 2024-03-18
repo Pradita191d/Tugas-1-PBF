@@ -12,7 +12,7 @@
   Ada beberapa contoh framework untuk bahasa pemrograman PHP, tetapi kali ini saya akan menjelaskan salah satunya saja yaitu CodeIgniter.
   Di bawah ini akan dijabarkan beberapa cara kita menginstall dan menggunakan framework CodeIgniter:
 
-  ## 1. Instalasi Komposer
+  ## - Instalasi Komposer
 
   Komposer adalah package manager atau kumpulan dari beberapa library yang akan kita gunakan untuk menginstall CodeIgniter.
   Sebelum kita menginstall CodeIgniter, ada beberapa yang harus kita persiapkan, diantaranya:
@@ -42,7 +42,7 @@
   composer update
   ```
 
-  ## 2. Jalankan Aplikasi
+  ## - Jalankan Aplikasi
 
   Ketikkan:
 
@@ -76,7 +76,7 @@
   Sesudah diubah mode development:
   ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/377b5f14-91be-4810-9b39-45b6cf56baa1)
 
-  ## 3. Halaman Statis | Bangun Aplikasi Pertama
+  ## - Halaman Statis | Bangun Aplikasi Pertama
 
   ### Menerapkan aturan routing
 
@@ -205,7 +205,7 @@
   Jalankan alamat `http://localhost:8080/home` maka akan tampil seperti di bawah ini: <br> <br>
   ![Screenshot 2024-03-18 131756](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/ae2fdfaf-99bb-48ba-9296-cbc0d4f4ed42)
 
-  ### 4. Bangun Aplikasi Pertama | Bagian Berita
+  ### - Bangun Aplikasi Pertama | Bagian Berita
   **Buat Database** <br>
   - Pertama kita buat database ci4 <br>
   ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/1e614c65-ea8c-4573-8828-5e159acf42f8)
@@ -268,6 +268,7 @@
   ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/2808ff57-2fd4-49a1-931f-17896db8e727) <br>
 
   Kode ini dapat dijalankan untuk menjalankan dua query berbeda. Dua metode yang digunakan yaitu findAll() dan first(), disediakan oleh kelas CodeIgniter\Model. Kita sudah mengetahui tabel mana yang akan digunakan berdasarkan properti $table  yang kita atur sebelumnya di kelas NewsModel. Ini adalah metode pembantu yang menggunakan pembuat kueri untuk menjalankan perintah pada tabel saat ini dan mengembalikan kumpulan hasil dalam format pilihan Anda. Dalam contoh ini, findAll() mengembalikan array dari array. <br>
+  
   **Tampilkan Berita**
   - Buat Controller News.php di `App/Controller` <br>
   ```php
@@ -313,93 +314,128 @@
   $routes->get('(:segment)', [Pages::class, 'view']);
   ```
    ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/bf0ad4aa-d4e6-4524-bc02-e8b3988e4b91) <br>
+   - Melengkapi `Controllers/News.php`<br>
+   ```php
+   <?php
 
-   - Melengkapi `Controllers/News.php`
+    namespace App\Controllers;
+    
+    use App\Models\NewsModel;
+    
+    class News extends BaseController
+    {
+        public function index()
+        {
+            $model = model(NewsModel::class);
+    
+            $data['news'] = $model->getNews();
+        }
+    
+        public function show($slug = null)
+        {
+            $model = model(NewsModel::class);
+    
+            $data['news'] = $model->getNews($slug);
+        }
+    }
+   ```
+     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/d56ef0ac-7368-4e0c-b821-3849a75773f8) <br>
+     
+  Kode di atas mengambil semua catatan berita dari model dan menugaskannya ke variabel. Nilai judul juga ditetapkan ke $data['title'] elemen dan semua data diteruskan ke tampilan. Anda sekarang perlu membuat tampilan untuk merender item berita. <br>
+  - Mengubah index() di Controllers/News.php <br>
+  ```php
+  <?php
+
+  namespace App\Controllers;
+  
+  use App\Models\NewsModel;
+  
+  class News extends BaseController
+  {
+      public function index()
+      {
+          $model = model(NewsModel::class);
+  
+          $data = [
+              'news'  => $model->getNews(),
+              'title' => 'News archive',
+          ];
+  
+          return view('templates/header', $data)
+              . view('news/index')
+              . view('templates/footer');
+      }
+  
+      // ...
+  }
+  ```
+  
+  - Buat File Views/news/index.php <br>
+     Isi kode: <br>
+     ```php
+     <h2><?= esc($title) ?></h2>
+
+    <?php if (! empty($news) && is_array($news)): ?>
+    
+        <?php foreach ($news as $news_item): ?>
+    
+            <h3><?= esc($news_item['title']) ?></h3>
+    
+            <div class="main">
+                <?= esc($news_item['body']) ?>
+            </div>
+            <p><a href="/news/<?= esc($news_item['slug'], 'url') ?>">View article</a></p>
+    
+        <?php endforeach ?>
+    
+    <?php else: ?>
+    
+        <h3>No News</h3>
+    
+        <p>Unable to find any news for you.</p>
+    
+    <?php endif ?>
+     ``` <br>
+     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/6b28b831-e6f8-4a05-9f68-d3943494498f) <br>
+     - Melengkapi File Controller/News.php <br>
      ```php
      <?php
     
-    namespace App\Controllers;
-    
-    use App\Models\NewsModel;
-    
-    class News extends BaseController
-    {
-        public function index()
-        {
-            $model = model(NewsModel::class);
-    
-            $data = [
-                'news'  => $model->getNews(),
-                'title' => 'News archive',
-            ];
-    
-            return view('templates/header', $data)
-                . view('news/index')
-                . view('templates/footer');
-        }
-    
-        // ...
-      }
-       ```
-  Kode di atas mengambil semua catatan berita dari model dan menugaskannya ke variabel. Nilai judul juga ditetapkan ke $data['title'] elemen dan semua data diteruskan ke tampilan. Anda sekarang perlu membuat tampilan untuk merender item berita. <br>
-  
-  - Buat File Views/news/index.php <br>
-  Isi kode: <br>
-  ```php
-  <h2><?= esc($title) ?></h2>
+      namespace App\Controllers;
+      
+      use App\Models\NewsModel;
+      
+      class News extends BaseController
+      {
+          public function index()
+          {
+              $model = model(NewsModel::class);
+      
+              $data = [
+                  'news'  => $model->getNews(),
+                  'title' => 'News archive',
+              ];
+      
+              return view('templates/header', $data)
+                  . view('news/index')
+                  . view('templates/footer');
+          }
+      
+          }
+     ```
+     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/fc904c19-bcda-4d27-af39-3b34a8f23277) <br>
 
-<?php if (! empty($news) && is_array($news)): ?>
-
-    <?php foreach ($news as $news_item): ?>
-
-        <h3><?= esc($news_item['title']) ?></h3>
-
-        <div class="main">
-            <?= esc($news_item['body']) ?>
-        </div>
-        <p><a href="/news/<?= esc($news_item['slug'], 'url') ?>">View article</a></p>
-
-    <?php endforeach ?>
-
-<?php else: ?>
-
-    <h3>No News</h3>
-
-    <p>Unable to find any news for you.</p>
-
-<?php endif ?>```
-
-    - Melengkapi File Controller/News.php <br>
+    **Buat `App/Views/news/view.php`** <br>
     ```php
-    <?php
-    
-    namespace App\Controllers;
-    
-    use App\Models\NewsModel;
-    
-    class News extends BaseController
-    {
-        public function index()
-        {
-            $model = model(NewsModel::class);
-    
-            $data = [
-                'news'  => $model->getNews(),
-                'title' => 'News archive',
-            ];
-    
-            return view('templates/header', $data)
-                . view('news/index')
-                . view('templates/footer');
-        }
-    
-        }
-    
-    ```
+     <h2><?= esc($news['title']) ?></h2>
+     <p><?= esc($news['body']) ?></p>
+     ``` 
+     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/1ca5812c-9373-4ac0-8a9f-099acd39ecad)
 
-    
+    **Saat akses URL : http://localhost:8080/news**
+    ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/9ff6307c-003d-4d6b-96e3-97f848a29dca)
 
-  ### 5. Ikhtisar CodeIgniter4 | Struktur Aplikasi
+  ### - Ikhtisar CodeIgniter4 | Struktur Aplikasi
 
   Struktur direktori default: `app/`, `public/`, `writable/`, `test/` dan `vendor/` atau `system/` <br>
 
@@ -417,7 +453,7 @@
   - `system/`<br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/0d36831c-b6f3-49c2-b475-05edaf54ee8d)
 
-### 6. MVC | Ikhtisar CodeIgniter4
+### - MVC | Ikhtisar CodeIgniter4
 
 **Apa itu MVC?** <br>
 MVC adalah singkatan dari Models, Views, dan Controllers. <br>
