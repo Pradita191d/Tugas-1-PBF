@@ -178,17 +178,17 @@
 
   ### 4. Struktur Aplikasi | Ikhtisar CodeIgniter4
   Struktur direktori default: `app/`, `public/`, `writable/`, `test/` dan `vendor/` atau `system/` <br>
-  - `app/` <br>
+  - `app/` <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/e1f69923-dfb6-4896-8a01-f30fcdf51fea)
-  - `public/` <br>
+  - `public/` <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/f69fa981-5924-4431-a29f-e0b46d5c02a0)
-  - `writable/` <br>
+  - `writable/` <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/a4565ee7-a600-452b-bae3-75fc3eef6ec7)
-  - `test/` <br>
+  - `test/` <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/9cd5ac26-7e40-4d02-8432-2a34e51bd2f0)
-  - `vendor/` <br>
+  - `vendor/` <br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/0d3096b3-c92f-468f-9460-c8f9b7d39557)
-  - `system/`<br>
+  - `system/`<br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/0d36831c-b6f3-49c2-b475-05edaf54ee8d)
 
 
