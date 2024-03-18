@@ -10,7 +10,7 @@
 - Framework CodeIgniter
    Ada beberapa contoh framework untuk bahasa pemrograman PHP, tetapi kali ini saya akan menjelaskan salah satunya saja yaitu CodeIgniter.
    Di bawah ini akan dijabarkan beberapa cara kita menginstall dan menggunakan framework CodeIgniter:
-   1. Installasi dengan composer
+  ## Installasi dengan composer
       Composer adalah package manager atau kumpulan dari beberapa library yang akan kita gunakan untuk menginstall CodeIgniter.
       Sebelum kita menginstall CodeIgniter, ada beberapa yang harus kita persiapkan, diantaranya:
       - Teks Editor -> VSCode
