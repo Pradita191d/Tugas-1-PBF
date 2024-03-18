@@ -103,16 +103,15 @@
      ```
       
      ### Membuat Tampilan
-     - Tampilan pertama adalah header yang disimpan di `App/Views/templates/header.php`
+     - Tampilan pertama adalah header yang disimpan di `App/Views/templates/header.php`<br>
        Isi kode:
-       ```  php
+       ```php
        <!doctype html>
-      <html>
-      <head>
+       <html>
+       <head>
           <title>CodeIgniter Tutorial</title>
-      </head>
-      <body>
-      
+       </head>
+       <body>
           <h1><?= esc($title) ?></h1>
        ```
      ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/a748d3e7-db31-4c5c-830b-e0f6f1cbe661)
