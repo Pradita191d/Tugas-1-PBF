@@ -53,7 +53,7 @@
   
   ## 3. Bangun Aplikasi Pertama | Halaman Statis
      ### Menerapakan aturan routing
-     Mari kita siapkan aturan routing. Buka file rute yang terletak di app/Config/Routes.php
+     Buka file rute yang terletak di app/Config/Routes.php
      ```shell
      <?php
 
@@ -64,10 +64,11 @@
        */
       $routes->get('/', 'Home::index');
      ```
-    - Codeigniter akan membuat jalur ketika ada akses yg method requestnya = get
+    - codeigniter akan membuat jalur ketika ada akses yg method requestnya = get
     - alamatnya->'/' (route->base URL->localhost:8080)
     - diarahkan ke controller Home-> index (method)
-  
+     ### Membuat Controller `App/Controller/Pages.php`
+     
 
      
   
