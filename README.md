@@ -114,18 +114,38 @@
        <body>
           <h1><?= esc($title) ?></h1>
        ```
-     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/a748d3e7-db31-4c5c-830b-e0f6f1cbe661)
-
-   - Tampilan kedua adalah footer yang disimpan di `App/Views/templates/header.php`
-     Isi kode:
-     ```  php
-     <em>&copy; 2022</em>
-         </body>
-     </html>
-     ```
+        ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/a748d3e7-db31-4c5c-830b-e0f6f1cbe661)
+   
+      - Tampilan kedua adalah footer yang disimpan di `App/Views/templates/header.php`
+        Isi kode:
+        ```  php
+        <em>&copy; 2022</em>
+            </body>
+        </html>
+        ```
   ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/fe7758ef-ab5f-433b-a02a-a0537612771d)
 
+      ### Menambah Logika Controller
+      Buat home.php dan about.php di `App/Views/pages` <br>
+      Isi kode:
+     ```php
+     <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+      </head>
+      <body>
+          <h1>Hello World!</h1>
+      </body>
+      </html>
+     ```
+      ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/5d1390d1-b29d-48dd-89ac-65821677c241)
 
+  
+   
+  
      
      
 
