@@ -50,6 +50,12 @@
   CI_ENVIRONMENT = development
   ```
   ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/843162a3-62dc-40fb-986e-89dbd04bd9d6)
+
+  Sebelum diubah mode development:
+  ![Screenshot 2024-03-18 110550](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/6452a58b-97cf-4794-8163-a595cd61aaf7)
+
+  Sesudah diubah mode development:
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/377b5f14-91be-4810-9b39-45b6cf56baa1)
   
   ## 3. Bangun Aplikasi Pertama | Halaman Statis
      ### Menerapakan aturan routing
