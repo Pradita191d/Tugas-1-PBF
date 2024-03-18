@@ -76,9 +76,9 @@
   Sesudah diubah mode development:
   ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/377b5f14-91be-4810-9b39-45b6cf56baa1)
 
-  ## 3. Bangun Aplikasi Pertama | Halaman Statis
+  ## 3. Halaman Statis | Bangun Aplikasi Pertama
 
-  ### Menerapakan aturan routing
+  ### Menerapkan aturan routing
 
   Buka file rute yang terletak di app/Config/Routes.php
 
@@ -205,7 +205,45 @@
   Jalankan alamat `http://localhost:8080/home` maka akan tampil seperti di bawah ini: <br> <br>
   ![Screenshot 2024-03-18 131756](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/ae2fdfaf-99bb-48ba-9296-cbc0d4f4ed42)
 
-  ### 4. Struktur Aplikasi | Ikhtisar CodeIgniter4
+  ### 4. Bangun Aplikasi Pertama | Bagian Berita
+  **Buat Database** <br>
+  - Pertama kita buat database ci4 <br>
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/1e614c65-ea8c-4573-8828-5e159acf42f8)
+  - Buat tabel news <br>
+  ```shell
+  CREATE TABLE news (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    title VARCHAR(128) NOT NULL,
+    slug VARCHAR(128) NOT NULL,
+    body TEXT NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE slug (slug)
+  );
+  ```
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/2131d2cc-eb39-42bb-baf7-e67781ea15b4)
+
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/b3af07c4-dbe3-45e0-8e93-6199ccb013dc)
+  - Isikan data ke tabel dengan perintah INSERT INTO <br>
+  ```shell
+  INSERT INTO news VALUES
+  (1,'Elvis sighted','elvis-sighted','Elvis was sighted at the Podunk internet cafe. It looked like he was writing a CodeIgniter app.'),
+  (2,'Say it isn\'t so!','say-it-isnt-so','Scientists conclude that some programmers have a sense of humor.'),
+  (3,'Caffeination, Yes!','caffeination-yes','World\'s largest coffee shop open onsite nested coffee shop for staff only.');
+  ```
+  ![Screenshot 2024-03-18 151842](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/ae7a1d02-6b8d-4ccd-9034-9671268f9bd3)
+
+  - Hubungkan ke database <br>
+  Untuk menghubungkan ke database, kita perlu file konfigurasi lokal, `.env`, yang telah dibuat pada saat awal menginstall CodeIginiter4. <br>
+  Sebelumnya, seperti di bawah ini: <br>
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/66511598-ea2e-4d8c-93d7-fabe23b056e9) <br>
+  Hilangkan tanda '#' untuk menjalankan kode tersebut. <br>
+  ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/ef57bdde-76ee-4049-8912-d6b281b2f807)
+
+
+    
+
+
+  ### 5. Ikhtisar CodeIgniter4 | Struktur Aplikasi
 
   Struktur direktori default: `app/`, `public/`, `writable/`, `test/` dan `vendor/` atau `system/` <br>
 
@@ -223,7 +261,7 @@
   - `system/`<br> <br>
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/0d36831c-b6f3-49c2-b475-05edaf54ee8d)
 
-### 5. MVC | Ikhtisar CodeIgniter4
+### 6. MVC | Ikhtisar CodeIgniter4
 
 **Apa itu MVC?** <br>
 MVC adalah singkatan dari Models, Views, dan Controllers. <br>
@@ -239,3 +277,5 @@ MVC adalah singkatan dari Models, Views, dan Controllers. <br>
 - **Views** biasanya berbentuk HTML dengan jumlah PHP yang sangat sedikit. Tampilan ini biasa disimpan di `app/Views`. <br>
 - **Models** bertugas memelihara satu tipe data untuk suatu aplikasi. Dalam hal ini, tugas model memiliki dua bagian: menerapkan aturan bisnis pada data saat diambil dari, atau dimasukkan ke dalam database; dan menangani penyimpanan dan pengambilan data sebenarnya dari database. Model biasanya disimpan di `app/Models`. <br>
 - **Controller** memiliki beberapa peran berbeda untuk dimainkan. Yang paling jelas adalah mereka menerima masukan dari pengguna dan kemudian menentukan apa yang harus dilakukan dengannya. Controller biasanya disimpan di `app/Controllers`.
+
+### 6. 
