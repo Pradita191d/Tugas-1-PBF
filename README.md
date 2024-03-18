@@ -193,13 +193,21 @@
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/0d36831c-b6f3-49c2-b475-05edaf54ee8d)
 
 ### 5. MVC | Ikhtisar CodeIgniter4
+**Apa itu MVC?** <br>
 MVC adalah singkatan dari Models, Views, dan Controllers. <br>
 
-**Models** digunakan untuk mengelola data aplikasi dan membantu menegakkan aturan bisnis khusus yang mungkin diperlukan aplikasi. <br> 
+- Models: digunakan untuk mengelola data aplikasi dan membantu menegakkan aturan bisnis khusus yang mungkin diperlukan aplikasi. <br> 
 
-**Views** adalah file sederhana, dengan sedikit atau tanpa logika, yang menampilkan informasi kepada pengguna. <br>
+- Views: file sederhana, dengan sedikit atau tanpa logika, yang menampilkan informasi kepada pengguna. <br>
 
-**Controllers** bertindak sebagai kode perekat, menyusun data bolak-balik antara tampilan (atau pengguna yang melihatnya) dan penyimpanan data. <br> 
+- Controllers: bertindak sebagai kode perekat, menyusun data bolak-balik antara tampilan (atau pengguna yang melihatnya) dan penyimpanan data. <br> 
+
+**Komponen MVC** <br>
+- **Views** biasanya berbentuk HTML dengan jumlah PHP yang sangat sedikit. Tampilan ini biasa disimpan di `app/Views`. <br>
+- **Models** bertugas memelihara satu tipe data untuk suatu aplikasi. Dalam hal ini, tugas model memiliki dua bagian: menerapkan aturan bisnis pada data saat diambil dari, atau dimasukkan ke dalam database; dan menangani penyimpanan dan pengambilan data sebenarnya dari database. Model biasanya disimpan di `app/Models`. <br>
+- **Controller** memiliki beberapa peran berbeda untuk dimainkan. Yang paling jelas adalah mereka menerima masukan dari pengguna dan kemudian menentukan apa yang harus dilakukan dengannya. Controller biasanya disimpan di `app/Controllers`. 
+  
+
 
 
 
