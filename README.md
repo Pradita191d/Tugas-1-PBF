@@ -193,7 +193,13 @@
     ![image](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/0d36831c-b6f3-49c2-b475-05edaf54ee8d)
 
 ### 5. MVC | Ikhtisar CodeIgniter4
-MVC adalah 
+MVC adalah singkatan dari Models, Views, dan Controllers. <br>
+
+**Models** digunakan untuk mengelola data aplikasi dan membantu menegakkan aturan bisnis khusus yang mungkin diperlukan aplikasi. <br> 
+
+**Views** adalah file sederhana, dengan sedikit atau tanpa logika, yang menampilkan informasi kepada pengguna. <br>
+
+**Controllers** bertindak sebagai kode perekat, menyusun data bolak-balik antara tampilan (atau pengguna yang melihatnya) dan penyimpanan data. <br> 
 
 
 
