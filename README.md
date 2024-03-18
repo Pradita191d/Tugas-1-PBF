@@ -67,7 +67,36 @@
     - codeigniter akan membuat jalur ketika ada akses yg method requestnya = get
     - alamatnya->'/' (route->base URL->localhost:8080)
     - diarahkan ke controller Home-> index (method)
+
+      Tambahkan baris kode di bawah ini:
+      ```php
+      use App\Controllers\Pages;
+
+      $routes->get('pages', [Pages::class, 'index']);
+      $routes->get('(:segment)', [Pages::class, 'view']);
+      ```
      ### Membuat Controller `App/Controller/Pages.php`
+     Isi kode `App/Controller/Pages.php` :
+     ```php
+      <?php
+      
+      namespace App\Controllers;
+      
+      class Pages extends BaseController
+      {
+          public function index()
+          {
+              return view('welcome_message');
+          }
+      
+          public function view($page = 'home')
+          {
+              // ...
+          }
+      }
+      ```
+     
+     
      
 
      
