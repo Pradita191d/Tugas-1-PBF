@@ -173,7 +173,7 @@
           }
       }
      ```
-     Jalankan alamat `http://localhost:8080/home` maka akan tampil seperti di bawah ini: <br>
+     Jalankan alamat `http://localhost:8080/home` maka akan tampil seperti di bawah ini: <br> <br>
   ![Screenshot 2024-03-18 131756](https://github.com/Pradita191d/Tugas-1-PBF/assets/134593226/ae2fdfaf-99bb-48ba-9296-cbc0d4f4ed42)
 
   
